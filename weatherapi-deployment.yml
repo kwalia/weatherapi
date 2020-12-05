@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weatherapi-deployment
+  labels:
+    app: weatherapi
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+        name: weatherapi-pod
+        app: weatherapi-app
+  template:
+    metadata:
+      name: weatherapi
+      labels:
+        name: weatherapi-pod
+        app: weatherapi-app
+
+    spec:
+      containers:
+        - name: weatherapi
+          image: karanwalia/weatherapi1
+          ports:
+            - containerPort: 80
