@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: weatherapi
+  labels:
+    name: weatherapi-pod
+    app: weatherapi-app
+
+spec:
+  containers:
+    - name: weatherapi
+      image: karanwalia/weatherapi1
+      ports:
+        - containerPort: 80
