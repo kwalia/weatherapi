@@ -9,6 +9,6 @@ metadata:
 spec:
   containers:
     - name: weatherapi
-      image: karanwalia/weatherapi1
+      image: karanwalia/weatherapi1:v1.1
       ports:
         - containerPort: 80
